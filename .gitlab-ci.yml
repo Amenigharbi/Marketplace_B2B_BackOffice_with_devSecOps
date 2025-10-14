@@ -1,0 +1,45 @@
+stages:
+  - security
+  - analysis
+
+variables:
+  TRIVY_VERSION: "0.45.0"
+  SONAR_SCANNER_VERSION: "5.0.1"
+
+# Étape 1 - Scan Trivy
+trivy-scan:
+  tags:
+   - docker 
+  stage: security
+  image:
+    name: aquasec/trivy:${TRIVY_VERSION}
+    entrypoint: [""]
+  script:
+    - trivy fs --security-checks vuln,secret,config --severity HIGH,CRITICAL ./src/
+    - trivy fs --security-checks vuln,secret --format sarif -o trivy-report.sarif ./src/
+  artifacts:
+    reports:
+      sast: trivy-report.sarif
+    paths:
+      - trivy-report.sarif
+    expire_in: 1 week
+  only:
+   - AmeniV3
+
+# Étape 2 - Analyse SonarQube
+sonarqube-check:
+  tags:
+   - docker 
+  stage: analysis
+  image: sonarsource/sonar-scanner-cli:${SONAR_SCANNER_VERSION}
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"
+  script:
+    - sonar-scanner -Dsonar.login=${SONAR_TOKEN} -Dsonar.sarifReportPaths=trivy-report.sarif
+  cache:
+    key: sonar-cache
+    paths:
+      - .sonar/cache
+  needs: ["trivy-scan"]
+  only:
+   - AmeniV3

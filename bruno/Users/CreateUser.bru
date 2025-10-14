@@ -1,0 +1,21 @@
+meta {
+  name: Create User
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/users/createUser
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username":"mjrad",
+    "lastName":"Mohamed",
+    "firstName":"Jrad",
+    "roleId":"1",
+    "password":"jrad#123"
+  }
+}

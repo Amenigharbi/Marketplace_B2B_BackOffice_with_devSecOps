@@ -1,0 +1,81 @@
+@startuml Marketplace Roles and Permissions
+
+' Define actors
+actor "KamiounAdminMaster" as Admin
+actor "Partner" as Partner
+actor "Agent" as Agent
+actor "Customer" as Customer
+actor "Supplier" as Supplier
+
+' Define resources
+package "Resources" {
+  [Product]
+  [Order]
+  [Reservation]
+  [Customer]
+  [Partner]
+  [Role]
+  [Permission]
+  [Agent]
+  [Tax]
+  [Promotion]
+  [ProductType]
+  [ProductStatus]
+  [State]
+  [Status]
+  [OrderPayment]
+}
+
+' Define actions
+package "Actions" {
+  [create]
+  [read]
+  [update]
+  [delete]
+}
+
+' Define role permissions
+Admin --> [Product] : all actions
+Admin --> [Order] : all actions
+Admin --> [Reservation] : all actions
+Admin --> [Customer] : all actions
+Admin --> [Partner] : all actions
+Admin --> [Role] : all actions
+Admin --> [Permission] : all actions
+Admin --> [Agent] : all actions
+Admin --> [Tax] : all actions
+Admin --> [Promotion] : all actions
+Admin --> [ProductType] : all actions
+Admin --> [ProductStatus] : all actions
+Admin --> [State] : all actions
+Admin --> [Status] : all actions
+Admin --> [OrderPayment] : all actions
+
+Partner --> [Product] : read
+Partner --> [Order] : read, update
+Partner --> [Reservation] : read, update
+Partner --> [Customer] : read
+
+Agent --> [Product] : read
+Agent --> [Order] : create, read, update
+Agent --> [Reservation] : create, read, update
+Agent --> [Customer] : create, read, update
+
+Customer --> [Product] : read
+Customer --> [Order] : create, read
+Customer --> [Reservation] : create, read
+Customer --> [Customer] : update (own profile)
+
+Supplier --> [Product] : read
+Supplier --> [Order] : read (related to own products)
+Supplier --> [ProductStatus] : read
+Supplier --> [ProductType] : read
+
+note right of Supplier
+  Supplier is a primary actor because they:
+  1. Initiate interactions with the system
+  2. Have direct goals (monitoring product performance)
+  3. Use the system to achieve business objectives
+end note
+
+@enduml

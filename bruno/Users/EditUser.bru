@@ -1,0 +1,21 @@
+meta {
+  name: Edit User
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/api/users/editUser
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "roleId": "1",
+      "username": "admin",
+      "lastName": "adm11in11",
+      "password": "123456",
+      "firstName": "admin"
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Get Delivery Agents
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://sandbox.kamioun.com/rest/default/V1/customers/search/?searchCriteria[filterGroups][0][filters][0][field]=group_id&searchCriteria[filterGroups][0][filters][0][value]=4
+  body: none
+  auth: bearer
+}
+
+params:query {
+  searchCriteria[filterGroups][0][filters][0][field]: group_id
+  searchCriteria[filterGroups][0][filters][0][value]: 4
+}
+
+auth:bearer {
+  token: pd2as4cqycmj671bga4egknw2csoa9b6
+}

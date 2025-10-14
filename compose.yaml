@@ -1,0 +1,24 @@
+
+version: "3.4"
+services:
+  typesense-dev:
+    image: typesense/typesense:0.25.2
+    container_name: typesense-dev
+    restart: always
+    volumes:
+      - /root/docker-volumes/typesense/typesense-staging-data:/data
+    command: --data-dir /data --api-key=coD7890T95b4wijhC3V0SYAoa5yW9fxn
+
+    ports:
+      - "8108:8108" 
+
+  mongodb-dev:
+    image: mongo:latest
+    container_name: mongodb-dev
+    restart: always
+    volumes:
+      - /root/docker-volumes/mongodb:/data/db
+
+    ports:
+      - "27017:27017" 
+

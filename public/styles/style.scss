@@ -1,0 +1,304 @@
+/* custom styles */
+.sidebar,
+.horiz {
+  &::-webkit-scrollbar {
+    background-color: rgba($color: #5d69f4, $alpha: 0.2);
+    transition-duration: 300ms;
+    width: 5px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($color: #5d69f4, $alpha: 0.5);
+    transition-duration: 300ms;
+  }
+}
+
+.sidebar:hover {
+  &::-webkit-scrollbar-thumb {
+    background-color: #5d69f4;
+  }
+}
+.horiz:hover {
+  &::-webkit-scrollbar-thumb {
+    background-color: #5d69f4;
+  }
+}
+
+// hovered layout
+.sidebar-hovered {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+.sidebar-hovered:hover {
+  &::-webkit-scrollbar {
+    background-color: rgba($color: #5d69f4, $alpha: 0.2);
+    transition-duration: 300ms;
+    width: 5px;
+    display: block;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($color: #5d69f4, $alpha: 1);
+    transition-duration: 300ms;
+    display: block;
+  }
+}
+// horizontal scroll
+
+* {
+  &::-webkit-scrollbar {
+    background-color: rgba($color: #5d69f4, $alpha: 0.2);
+    transition-duration: 300ms;
+    width: 5px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($color: #5d69f4, $alpha: 8);
+    &:hover {
+      background-color: rgba($color: #5d69f4, $alpha: 1);
+    }
+    transition-duration: 300ms;
+  }
+}
+// react calender
+
+.react-calendar__navigation button {
+  font-size: 1rem !important;
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+.react-calendar__tile--now {
+  background: #5d69f4 !important;
+}
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  background: transparent !important;
+}
+.react-calendar__month-view__weekdays {
+  background-color: rgba($color: #5d69f4, $alpha: 0.05);
+  padding: 10px 6px;
+}
+.react-calendar__tile--active {
+  background-color: #5d69f4 !important;
+}
+abbr:where([title]) {
+  text-decoration: none !important;
+}
+.react-calendar__navigation button {
+  font-size: 1.6rem;
+}
+.react-calendar__tile {
+  padding: 15px 6px !important;
+}
+.dark .react-calendar__month-view__days__day {
+  &:hover {
+    background: rgba($color: #5d69f4, $alpha: 0.08) !important;
+  }
+}
+/* Progressbar grow animation */
+.progress-grow {
+  animation: growlong 2s linear;
+}
+@keyframes growlong {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: auto !important;
+  }
+}
+
+// swiper pagination
+.foodapp {
+  .swiper-pagination-bullet {
+    background-color: rgba($color: #5d69f4, $alpha: 1);
+    width: 12px;
+    height: 12px;
+    transition-duration: 400ms;
+    cursor: pointer;
+    opacity: 0.4;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #5d69f4;
+    opacity: 1;
+    width: 28px;
+    border-radius: 10px;
+  }
+}
+
+// inbox table
+.inbox-table tr:first-child {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// apexchart tooltip
+.dark .apexcharts-tooltip {
+  background-color: #1b232d !important;
+  border-color: #404a60 !important;
+}
+.dark .apexcharts-tooltip-title {
+  border-color: #404a60 !important;
+  background-color: #1b232d !important;
+}
+
+// input type date
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-position: right;
+  background-size: auto;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+// react range slider
+.single-thumb {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: 15px;
+  background: #e0e3e6;
+}
+.dark .single-thumb {
+  background: #131920;
+}
+#range .range-slider__range {
+  background-color: #5d69f4;
+}
+#range .range-slider__thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.6rem;
+  height: 1.25rem;
+  background: #5d69f4;
+  border: 1px solid #e0e3e6;
+  border-radius: 1rem;
+  opacity: 1;
+  cursor: e-resize;
+}
+/* Range Slider as a Single Thumb Slider */
+#range .single-thumb .range-slider__thumb[data-lower] {
+  width: 0;
+  display: none;
+}
+#range .single-thumb .range-slider__range {
+  border-radius: 6px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
+  display: none;
+}
+// video news border
+.video-news {
+  &:nth-child(7) {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+// rounded table
+.rounded-table {
+  td:first-child {
+    -moz-border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
+  }
+  td:last-child {
+    -moz-border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+// quill editor
+.ql-editor {
+  min-height: 120px;
+  background-color: rgba($color: #5d69f4, $alpha: 0.05);
+  border-radius: 0 0 16px 16px;
+}
+.ql-toolbar {
+  border-radius: 16px 16px 0 0;
+  border-color: #ebecef !important;
+}
+.dark .ql-toolbar {
+  border-color: #404a60 !important;
+}
+.dark .ql-container.ql-snow {
+  border-color: #404a60 !important;
+}
+.ql-container.ql-snow {
+  border-radius: 0 0 16px 16px;
+  border-color: #ebecef !important;
+}
+
+.dark .ql-picker-label {
+  color: #e0e3e6;
+  &:hover {
+    color: #e0e3e6;
+  }
+}
+
+.dark .ql-formats svg {
+  filter: invert(100%) sepia(0%) saturate(4067%) hue-rotate(63deg)
+    brightness(100%) contrast(105%);
+}
+
+// Loader
+.loader {
+  svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+  }
+
+  circle {
+    fill: none;
+    stroke: #5d69f4;
+    stroke-width: 3;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1s ease-in-out infinite;
+  }
+
+  @keyframes rotate4 {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes dash4 {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+
+    50% {
+      stroke-dasharray: 90, 200;
+      stroke-dashoffset: -35px;
+    }
+
+    100% {
+      stroke-dashoffset: -125px;
+    }
+  }
+}

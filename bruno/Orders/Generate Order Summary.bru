@@ -1,0 +1,19 @@
+meta {
+  name: Generate Order Summary
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/api/orders/cancelOrder
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  
+      "orderId":"66447",
+      "username":"admin"
+  }
+}

@@ -1,0 +1,153 @@
+@startuml Marketplace Use Case Diagram
+
+' Define actors
+actor "Customer" as Customer
+actor "Partner" as Partner
+actor "Agent" as Agent
+actor "Admin" as Admin
+actor "Supplier" as Supplier
+actor "System" as System
+
+' Define use case packages
+rectangle "Product Management" {
+  usecase "Browse Products" as BrowseProducts
+  usecase "Search Products" as SearchProducts
+  usecase "View Product Details" as ViewProductDetails
+  usecase "Add Product to Favorites" as AddToFavorites
+  usecase "Manage Product Inventory" as ManageInventory
+  usecase "Create Product" as CreateProduct
+  usecase "Update Product" as UpdateProduct
+  usecase "Delete Product" as DeleteProduct
+  usecase "Manage Product Categories" as ManageCategories
+  usecase "Manage Product Types" as ManageTypes
+  usecase "Manage Product Status" as ManageStatus
+  usecase "Set Product Promotions" as SetPromotions
+  usecase "View Product Statistics" as ViewProductStats
+  usecase "Monitor Product Performance" as MonitorProductPerformance
+}
+
+rectangle "Order Management" {
+  usecase "Create Order" as CreateOrder
+  usecase "View Orders" as ViewOrders
+  usecase "Update Order Status" as UpdateOrderStatus
+  usecase "Cancel Order" as CancelOrder
+  usecase "Process Payment" as ProcessPayment
+  usecase "Generate Invoice" as GenerateInvoice
+  usecase "Track Order" as TrackOrder
+  usecase "Manage Order Items" as ManageOrderItems
+  usecase "Create Main Order" as CreateMainOrder
+}
+
+rectangle "Reservation Management" {
+  usecase "Create Reservation" as CreateReservation
+  usecase "View Reservations" as ViewReservations
+  usecase "Update Reservation" as UpdateReservation
+  usecase "Convert Reservation to Order" as ConvertToOrder
+  usecase "Cancel Reservation" as CancelReservation
+}
+
+rectangle "Customer Management" {
+  usecase "Register Customer" as RegisterCustomer
+  usecase "Update Customer Profile" as UpdateCustomerProfile
+  usecase "View Customer Orders" as ViewCustomerOrders
+  usecase "Manage Loyalty Points" as ManageLoyaltyPoints
+  usecase "Manage Customer Notifications" as ManageNotifications
+}
+
+rectangle "Partner Management" {
+  usecase "Register Partner" as RegisterPartner
+  usecase "Update Partner Profile" as UpdatePartnerProfile
+  usecase "Manage Partner Products" as ManagePartnerProducts
+  usecase "View Partner Orders" as ViewPartnerOrders
+  usecase "Set Partner Coverage Area" as SetCoverageArea
+}
+
+rectangle "Role and Permission Management" {
+  usecase "Create Role" as CreateRole
+  usecase "Assign Permissions" as AssignPermissions
+  usecase "Manage User Roles" as ManageUserRoles
+  usecase "View Role Matrix" as ViewRoleMatrix
+}
+
+' Define relationships
+
+' Customer relationships
+Customer --> BrowseProducts
+Customer --> SearchProducts
+Customer --> ViewProductDetails
+Customer --> AddToFavorites
+Customer --> CreateOrder
+Customer --> ViewOrders
+Customer --> TrackOrder
+Customer --> CancelOrder
+Customer --> CreateReservation
+Customer --> ViewReservations
+Customer --> CancelReservation
+Customer --> RegisterCustomer
+Customer --> UpdateCustomerProfile
+Customer --> ViewCustomerOrders
+
+' Partner relationships
+Partner --> ManagePartnerProducts
+Partner --> ViewPartnerOrders
+Partner --> UpdatePartnerProfile
+Partner --> SetCoverageArea
+Partner --> ViewOrders
+Partner --> UpdateOrderStatus
+
+' Agent relationships
+Agent --> CreateOrder
+Agent --> ViewOrders
+Agent --> UpdateOrderStatus
+Agent --> ProcessPayment
+Agent --> GenerateInvoice
+Agent --> CreateReservation
+Agent --> ConvertToOrder
+Agent --> ViewCustomerOrders
+Agent --> ManageLoyaltyPoints
+
+' Admin relationships
+Admin --> CreateProduct
+Admin --> UpdateProduct
+Admin --> DeleteProduct
+Admin --> ManageInventory
+Admin --> ManageCategories
+Admin --> ManageTypes
+Admin --> ManageStatus
+Admin --> SetPromotions
+Admin --> ViewOrders
+Admin --> UpdateOrderStatus
+Admin --> CreateRole
+Admin --> AssignPermissions
+Admin --> ManageUserRoles
+Admin --> ViewRoleMatrix
+Admin --> RegisterPartner
+Admin --> ManageNotifications
+
+' Supplier relationships
+Supplier --> ViewProductStats
+Supplier --> MonitorProductPerformance
+Supplier --> ViewProductDetails
+Supplier --> SearchProducts
+
+' System relationships
+System --> ProcessPayment
+System --> GenerateInvoice
+System --> ManageLoyaltyPoints
+System --> CreateMainOrder
+System --> ManageOrderItems
+
+' Include relationships
+CreateOrder ..> ProcessPayment : <<include>>
+CreateOrder ..> ManageOrderItems : <<include>>
+ConvertToOrder ..> CreateOrder : <<include>>
+UpdateOrderStatus ..> ManageOrderItems : <<extend>>
+
+note right of Supplier
+  Supplier is a primary actor because they:
+  1. Initiate interactions with the system
+  2. Have direct goals (monitoring product performance)
+  3. Use the system to achieve business objectives
+end note
+
+@enduml

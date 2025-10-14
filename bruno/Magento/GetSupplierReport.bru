@@ -1,0 +1,21 @@
+meta {
+  name: Get Supplier Report
+  type: http
+  seq: 11
+}
+
+get {
+  url: https://sandbox.kamioun.com/rest/default/V1/orders/saleslist_without_sum?deliveryDateStart=09/09/2024&deliveryDateEnd=12/09/2024&manufacturer=10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  deliveryDateStart: 09/09/2024
+  deliveryDateEnd: 12/09/2024
+  manufacturer: 10
+}
+
+auth:bearer {
+  token: pd2as4cqycmj671bga4egknw2csoa9b6
+}

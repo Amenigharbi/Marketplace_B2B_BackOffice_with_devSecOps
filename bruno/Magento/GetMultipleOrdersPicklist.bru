@@ -1,0 +1,25 @@
+meta {
+  name: Get Multiple Orders  Picklist
+  type: http
+  seq: 15
+}
+
+get {
+  url: https://sandbox.kamioun.com/rest/default/V1/orders/picklist?ordersIds=${ordersIdsString}
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ordersIds: ${ordersIdsString}
+}
+
+auth:bearer {
+  token: pd2as4cqycmj671bga4egknw2csoa9b6
+}
+
+body:json {
+  {
+    "orderId": "63468"
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Change Order Status
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/api/orders/changeOrderStatus
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "orderId": "66371",
+    "status": "valid",
+    "state": "open",
+    "username":"admin"
+  }
+}

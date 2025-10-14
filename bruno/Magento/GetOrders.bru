@@ -1,0 +1,22 @@
+meta {
+  name: Get Orders
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://sandbox.kamioun.com/rest/default/V1/orders?searchCriteria[pageSize]=10&searchCriteria[currentPage]=1&searchCriteria[sortOrders][0][field]=entity_id&searchCriteria[sortOrders][0][direction]=DESC
+  body: none
+  auth: bearer
+}
+
+params:query {
+  searchCriteria[pageSize]: 10
+  searchCriteria[currentPage]: 1
+  searchCriteria[sortOrders][0][field]: entity_id
+  searchCriteria[sortOrders][0][direction]: DESC
+}
+
+auth:bearer {
+  token: pd2as4cqycmj671bga4egknw2csoa9b6
+}

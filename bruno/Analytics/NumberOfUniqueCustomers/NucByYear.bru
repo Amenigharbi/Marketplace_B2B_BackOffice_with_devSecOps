@@ -1,0 +1,15 @@
+meta {
+  name: NucByYear
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/api/analytics/nuc/byYear?year=2024
+  body: none
+  auth: none
+}
+
+params:query {
+  year: 2024
+}

@@ -1,0 +1,77 @@
+meta {
+  name: Edit Milk Run
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:3000/api/delivery/editMilkRun
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: HgomyMjEBfIAi0FukmGf5E65sKDhEy
+}
+
+body:json {
+  {
+    "order": {
+      "id": "6427153",
+      "orderId": "63453",
+      "incrementId": "000052675",
+      "kamiounId": "000052675",
+      "state": "new",
+      "status": "valid",
+      "total": 159.0900,
+      "createdAt": 1722350694,
+      "customerId": "6324",
+      "storeId": "1",
+      "customerPhone": "24946132",
+      "customerFirstname": "Ikbel",
+      "customerLastname": "Sousse",
+      "deliveryAgentId": "agentid",
+      "deliveryAgentName": "agnetName",
+      "deliverySlot": "Matin",
+      "deliveryDate": 0,
+      "deliveryStatus": "",
+      "source": "online",
+      "items": [
+        {
+          "id": "797787",
+          "orderId": "63453",
+          "productId": "3244",
+          "productName": "La Goulette - Thon entier HV 2.1kg",
+          "productPrice": "46.2",
+          "totalPrice": "138.6000",
+          "quantity": "3.0000",
+          "sku": "61915718013445",
+          "weight": "6"
+        },
+        {
+          "id": "797788",
+          "orderId": "63453",
+          "productId": "3952",
+          "productName": "Oliv+ Trio d'Or - 50% Huile d'Olive 1L",
+          "productPrice": "15.39",
+          "totalPrice": "15.3900",
+          "quantity": "1.0000",
+          "sku": "6194017409148",
+          "weight": "6"
+        },
+        {
+          "id": "797789",
+          "orderId": "63453",
+          "productId": "154",
+          "productName": "Bonna - Pot moutarde 263ml (Unité)",
+          "productPrice": "5.1",
+          "totalPrice": "5.1000",
+          "quantity": "1.0000",
+          "sku": "001-001001",
+          "weight": "6"
+        }
+      ]
+    },"username": "admin"
+  }
+  
+}

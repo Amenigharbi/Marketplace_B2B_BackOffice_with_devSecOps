@@ -1,0 +1,19 @@
+meta {
+  name: Edit User Status
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3000/api/users/editUserStatus
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "status": "inactive",
+      "username": "admin"
+  
+  }
+}

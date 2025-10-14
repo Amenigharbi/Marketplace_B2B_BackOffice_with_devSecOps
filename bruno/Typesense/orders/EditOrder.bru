@@ -1,0 +1,44 @@
+meta {
+  name: Edit Order
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/api/typesense/editOrder
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: HgomyMjEBfIAi0FukmGf5E65sKDhEy
+}
+
+body:json {
+  {
+    "order": {
+      "id": "898989",
+      "state": "new",
+      "status": "open",
+      "total": 159.0900,
+      "deliveryAgentId": "",
+      "deliveryAgentName": "",
+      "deliverySlot": "Matin",
+      "deliveryDate": 0,
+      "deliveryStatus": "",
+      "items": [
+        {
+          "id": "797787",
+          "orderId": "63453",
+          "productId": "3244",
+          "productName": "La Goulette - Thon entier HV 2.1kg",
+          "productPrice": "46.2",
+          "totalPrice": "138.6000",
+          "quantity": "3.0000",
+          "sku": "61915718013445",
+          "weight": "6"
+        }
+      ]
+    }
+  }
+}

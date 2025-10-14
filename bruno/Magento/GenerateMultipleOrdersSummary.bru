@@ -1,0 +1,21 @@
+meta {
+  name: Generate Multiple Orders Summary
+  type: http
+  seq: 14
+}
+
+post {
+  url: https://sandbox.kamioun.com/rest/default/V1/order_summary/bulk_zip_generate
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: pd2as4cqycmj671bga4egknw2csoa9b6
+}
+
+body:json {
+  {
+    "ordersIds": "63463,63462,63462"
+  }
+}

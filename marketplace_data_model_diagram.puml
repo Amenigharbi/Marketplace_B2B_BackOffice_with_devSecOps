@@ -1,0 +1,302 @@
+@startuml Marketplace Data Model
+
+' Define classes for the main entities
+class User {
+  id: String
+  username: String
+  firstName: String
+  lastName: String
+  password: String
+  roleId: String
+  mRoleId: String
+  isActive: Boolean
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class Customer {
+  id: String
+  firstName: String
+  lastName: String
+  governorate: String
+  gender: String
+  retailer_profile: String
+  email: String
+  telephone: String
+  address: String
+  password: String
+  roleId: String
+  isActive: Boolean
+  created_at: DateTime
+  updated_at: DateTime
+}
+
+class Partner {
+  id: String
+  username: String
+  firstName: String
+  lastName: String
+  email: String
+  telephone: String
+  address: String
+  password: String
+  isActive: Boolean
+  logo: String
+  patent: String
+  responsibleName: String
+  position: String
+  coverageArea: String
+  minimumAmount: Float
+  typePartnerId: String
+  roleId: String
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class Agent {
+  id: String
+  username: String
+  firstName: String
+  lastName: String
+  email: String
+  telephone: String
+  address: String
+  password: String
+  roleId: String
+  isActive: Boolean
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class Product {
+  id: String
+  product_id: Int
+  sku: String
+  name: String
+  price: Float
+  special_price: Float
+  cost: Float
+  manufacturer: String
+  category_ids: String[]
+  website_ids: Int[]
+  image: String
+  url_key: String
+  created_at: String
+  updated_at: String
+  barcode: String
+  description: String
+  pcb: String
+  weight: Float
+  minimumQte: Float
+  maximumQte: Float
+  sealable: Float
+  alertQte: Float
+  loyaltyPointsPerProduct: Float
+  loyaltyPointsPerUnit: Float
+  loyaltyPointsBonusQuantity: Float
+  loyaltyPointsThresholdQty: Float
+  promo: Boolean
+  typePcbId: String
+  productTypeId: String
+  productStatusId: String
+  supplierId: String
+  taxId: String
+  promotionId: String
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class Order {
+  id: String
+  amountExclTaxe: Float
+  amountTTC: Float
+  amountBeforePromo: Float
+  amountAfterPromo: Float
+  amountRefunded: Float
+  amountCanceled: Float
+  amountOrdered: Float
+  amountShipped: Float
+  shippingMethod: String
+  loyaltyPtsValue: Int
+  isActive: Boolean
+  fromMobile: Boolean
+  weight: Float
+  statusId: String
+  stateId: String
+  customerId: String
+  agentId: String
+  reservationId: String
+  partnerId: String
+  paymentMethodId: String
+  mainOrderId: String
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class OrderItem {
+  id: String
+  qteOrdered: Int
+  qteRefunded: Int
+  qteShipped: Int
+  qteCanceled: Int
+  discountedPrice: Float
+  weight: Float
+  sku: String
+  orderId: String
+  productId: String
+  taxId: String
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class Reservation {
+  id: String
+  amountExclTaxe: Float
+  amountTTC: Float
+  amountBeforePromo: Float
+  amountAfterPromo: Float
+  amountRefunded: Float
+  amountCanceled: Float
+  amountOrdered: Float
+  amountShipped: Float
+  shippingMethod: String
+  isActive: Boolean
+  loyaltyPtsValue: Int
+  fromMobile: Boolean
+  weight: Float
+  customerId: String
+  agentId: String
+  partnerId: String
+  paymentMethodId: String
+  orderId: String
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class ReservationItem {
+  id: String
+  qteReserved: Int
+  discountedPrice: Float
+  weight: Float
+  sku: String
+  reservationId: String
+  productId: String
+  taxId: String
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class Role {
+  id: String
+  name: String
+}
+
+class Permission {
+  id: String
+  resource: String
+}
+
+class RolePermission {
+  id: String
+  roleId: String
+  permissionId: String
+  actions: String[]
+}
+
+class ProductType {
+  id: String
+  type: String
+}
+
+class ProductStatus {
+  id: String
+  actif: Boolean
+  name: String
+}
+
+class Tax {
+  id: String
+  value: Float
+}
+
+class Promotion {
+  id: String
+  startDate: DateTime
+  endDate: DateTime
+  promoPrice: Float
+}
+
+class State {
+  id: String
+  name: String
+}
+
+class Status {
+  id: String
+  name: String
+  stateId: String
+}
+
+class OrderPayment {
+  id: String
+  name: String
+}
+
+class MainOrder {
+  id: String
+}
+
+class Manufacturer {
+  id: String
+  manufacturerId: Int
+  code: String
+  companyName: String
+  contactName: String
+  phoneNumber: String
+  postalCode: String
+  city: String
+  country: String
+  capital: String
+  email: String
+  address: String
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+' Define relationships
+User "1" -- "0..1" Role : has
+Partner "1" -- "0..1" Role : has
+Customer "1" -- "0..1" Role : has
+Agent "1" -- "0..1" Role : has
+
+Role "1" -- "*" RolePermission : has
+Permission "1" -- "*" RolePermission : has
+
+Product "1" -- "0..1" ProductType : has
+Product "1" -- "0..1" ProductStatus : has
+Product "1" -- "0..1" Tax : has
+Product "1" -- "0..1" Promotion : has
+Product "1" -- "0..1" Manufacturer : supplied by
+
+Order "1" -- "*" OrderItem : contains
+Order "0..1" -- "1" Reservation : created from
+Order "1" -- "0..1" Status : has
+Order "1" -- "0..1" State : has
+Order "1" -- "0..1" Customer : belongs to
+Order "1" -- "0..1" Agent : managed by
+Order "1" -- "0..1" Partner : fulfilled by
+Order "1" -- "0..1" OrderPayment : paid with
+Order "*" -- "0..1" MainOrder : grouped in
+
+Reservation "1" -- "*" ReservationItem : contains
+Reservation "1" -- "0..1" Customer : belongs to
+Reservation "1" -- "0..1" Agent : managed by
+Reservation "1" -- "0..1" Partner : fulfilled by
+Reservation "1" -- "0..1" OrderPayment : paid with
+
+OrderItem "1" -- "1" Product : references
+ReservationItem "1" -- "1" Product : references
+
+Status "1" -- "1" State : belongs to
+
+@enduml

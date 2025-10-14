@@ -1,0 +1,21 @@
+meta {
+  name: Cancel Order
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/api/typesense/cancelOrder
+  body: json
+  auth: none
+}
+
+headers {
+  X-API-Key: HgomyMjEBfIAi0FukmGf5E65sKDhEy
+}
+
+body:json {
+  {
+    "orderId": "66445"
+  }
+}

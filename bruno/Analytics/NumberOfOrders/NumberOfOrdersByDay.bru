@@ -1,0 +1,15 @@
+meta {
+  name: Number Of Orders By  Day
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/api/analytics/noo/byDay?day=2024-07-12
+  body: none
+  auth: none
+}
+
+params:query {
+  day: 2024-07-12
+}

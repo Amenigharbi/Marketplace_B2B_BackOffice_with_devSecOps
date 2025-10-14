@@ -1,0 +1,69 @@
+@startuml Marketplace Order Workflow
+
+' Define actors
+actor Customer
+actor Partner
+actor Agent
+actor Admin
+actor Supplier #Red
+
+' Define states
+state "Browse Products" as BrowseProducts
+state "Create Reservation" as CreateReservation
+state "Reservation Created" as ReservationCreated
+state "Convert to Order" as ConvertToOrder
+state "Order Created" as OrderCreated
+state "Order Open" as OrderOpen
+state "Order Valid" as OrderValid
+state "Ready to Ship" as ReadyToShip
+state "Shipped" as Shipped
+state "Delivered" as Delivered
+state "Unpaid" as Unpaid
+state "Archived" as Archived
+state "Canceled" as Canceled
+state "View Product Stats" as ViewProductStats #LightBlue
+
+' Define transitions
+[*] --> BrowseProducts
+BrowseProducts --> CreateReservation : Add products to cart
+CreateReservation --> ReservationCreated : Submit reservation
+ReservationCreated --> ConvertToOrder : Convert reservation
+ConvertToOrder --> OrderCreated : Create order
+OrderCreated --> OrderOpen : Initial state
+OrderOpen --> OrderValid : Validate order
+OrderOpen --> Canceled : Cancel order
+OrderValid --> ReadyToShip : Prepare for shipping
+OrderValid --> OrderOpen : Back to open
+OrderValid --> Canceled : Cancel order
+ReadyToShip --> Shipped : Ship order
+Shipped --> Unpaid : Mark as unpaid
+Shipped --> OrderValid : Back to valid
+Shipped --> Canceled : Cancel order
+Unpaid --> Delivered : Mark as delivered
+Delivered --> Archived : Archive order
+Canceled --> [*]
+Archived --> [*]
+
+' Supplier interactions
+[*] --> ViewProductStats : Supplier logs in
+ViewProductStats --> [*] : Supplier logs out
+
+' Actor relationships
+Customer --> BrowseProducts
+Customer --> CreateReservation
+Agent --> ConvertToOrder
+Agent --> OrderOpen
+Agent --> OrderValid
+Partner --> ReadyToShip
+Partner --> Shipped
+Admin --> Archived
+Supplier --> ViewProductStats : Views product statistics
+
+note right of Supplier
+  Supplier is a primary actor because they:
+  1. Initiate interactions with the system
+  2. Have direct goals (monitoring product performance)
+  3. Use the system to achieve business objectives
+end note
+
+@enduml

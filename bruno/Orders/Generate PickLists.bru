@@ -1,0 +1,18 @@
+meta {
+  name: Generate PickLists
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:3000/api/orders/generateOrderSummary
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  
+      "orderId":"66447"
+  }
+}

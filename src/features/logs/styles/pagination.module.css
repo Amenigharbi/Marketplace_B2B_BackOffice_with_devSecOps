@@ -1,0 +1,65 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 12px;
+  }
+  
+  .pagination button {
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+    padding: 12px 18px;
+    margin: 0 8px;
+    border: 2px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pagination button:hover {
+    background-color: #e2e6ea;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagination .Mui-selected {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagination .Mui-disabled {
+    background-color: #f0f0f0;
+    color: #aaa;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .pagination button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.4);
+  }
+  
+  .pagination .MuiPaginationItem-ellipsis {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .pagination {
+      gap: 6px;
+    }
+  
+    .pagination button {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+  

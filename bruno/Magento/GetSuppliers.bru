@@ -1,0 +1,19 @@
+meta {
+  name: Get Suppliers
+  type: http
+  seq: 8
+}
+
+get {
+  url: https://sandbox.kamioun.com/rest/default/V1/kamioun-manufacturers/manufacturer/search?searchCriteria=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  searchCriteria: 
+}
+
+auth:bearer {
+  token: pd2as4cqycmj671bga4egknw2csoa9b6
+}

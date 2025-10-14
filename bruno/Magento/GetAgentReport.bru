@@ -1,0 +1,21 @@
+meta {
+  name: Get Agent Report
+  type: http
+  seq: 9
+}
+
+get {
+  url: https://sandbox.kamioun.com/rest/default/V1/agents/agent_report?deliveryDateStart=10/08/2024&deliveryDateEnd=11/09/2024&agentId=221
+  body: none
+  auth: bearer
+}
+
+params:query {
+  deliveryDateStart: 10/08/2024
+  deliveryDateEnd: 11/09/2024
+  agentId: 221
+}
+
+auth:bearer {
+  token: pd2as4cqycmj671bga4egknw2csoa9b6
+}

@@ -1,0 +1,963 @@
+{
+  "orders": [
+    {
+      "order": {
+        "id": "6427153",
+        "orderId": "63453",
+        "incrementId": "000052675",
+        "kamiounId": "000052675",
+        "state": "delivered",
+        "status": "valid",
+        "total": 159.09,
+        "createdAt": 1739525976,
+        "customerId": "6324",
+        "storeId": "1",
+        "customerPhone": "24946132",
+        "customerFirstname": "Ikbel",
+        "customerLastname": "Sousse",
+        "segment_type": "drug store",
+        "deliveryAgentId": "agentid",
+        "deliveryAgentName": "agnetName",
+        "deliverySlot": "Matin",
+        "deliveryDate": 1723628376,
+        "deliveryStatus": null,
+        "source": "online",
+        "shippingAddress": {
+          "customerFirstname": "Ikbel",
+          "customerLastname": "Sousse",
+          "phone": "24946132",
+          "address": "Sarah Jouini",
+          "city": "Tunis",
+          "postal_code": "1002",
+          "region": "ben arous",
+          "country": "Tunisia"
+        },
+        "items": [
+          {
+            "id": "797787",
+            "orderId": "63453",
+            "productId": "3244",
+            "productName": "La Goulette - Thon entier HV 2.1kg",
+            "productPrice": "46.2",
+            "totalPrice": "138.6000",
+            "quantity": "3.0000",
+            "sku": "61915718013445",
+            "weight": "6",
+            "category": {
+              "categoryId": "2",
+              "categoryName": "Food",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "201",
+                  "subcategoryName": "snacks",
+                  "description": "bla bla."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "9",
+              "code": "001",
+              "company_name": "Technofood",
+              "contact_name": "Mehdi Bourguiba",
+              "phone_number": "22218000",
+              "postal_code": "2082",
+              "city": "Tunis",
+              "country": "Tunisia",
+              "capital": "Tunis",
+              "email": "slim.boughzala@technofoodindustries.com"
+            }
+          },
+          {
+            "id": "797788",
+            "orderId": "63453",
+            "productId": "3952",
+            "productName": "Oliv+ Trio d'Or - 50% Huile d'Olive 1L",
+            "productPrice": "15.39",
+            "totalPrice": "15.3900",
+            "quantity": "1.0000",
+            "sku": "6194017409148",
+            "weight": "6",
+            "category": {
+              "categoryId": "3",
+              "categoryName": "Beverages",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "301",
+                  "subcategoryName": "Olive Oils",
+                  "description": "Cold-pressed olive oils."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "9",
+              "code": "001",
+              "company_name": "Technofood",
+              "contact_name": "Mehdi Bourguiba",
+              "phone_number": "22218000",
+              "postal_code": "2082",
+              "city": "Tunis",
+              "country": "Tunisia",
+              "capital": "Tunis",
+              "email": "slim.boughzala@technofoodindustries.com"
+            }
+          },
+          {
+            "id": "797789",
+            "orderId": "63453",
+            "productId": "154",
+            "productName": "Bonna - Pot moutarde 263ml (Unité)",
+            "productPrice": "5.1",
+            "totalPrice": "5.1000",
+            "quantity": "1.0000",
+            "sku": "001-001001",
+            "weight": "6",
+            "category": {
+              "categoryId": "2",
+              "categoryName": "Food",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "202",
+                  "subcategoryName": "Condiments",
+                  "description": "Various sauces, mustards, and condiments."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "178",
+              "code": "516",
+              "company_name": "CAC DG",
+              "tax_registration_number": "1668051/B/P/E/000",
+              "contact_name": "agence wed elil",
+              "address": "wed elili",
+              "email": "cacdg.commercial@gmail.com"
+            }
+          }
+        ],
+        "return": {
+          "returnId": "RNT-20240211-008",
+          "orderId": "6427153",
+          "returnStatus": "completed",
+          "refundAmount": 60.0,
+          "returnItems": [
+            {
+              "productId": "5648",
+              "productName": "La Goulette - Thon entier HV 2.1kg",
+              "quantity": "1",
+              "returnDate": 1742040000,
+              "totalPrice": "60.00"
+            }
+          ]
+        },
+        "invoice": {
+          "invoiceId": "INV-20240211-002",
+          "orderId": "63453",
+          "invoiceDate": "2025-02-11",
+          "dueDate": "2025-02-18",
+          "paymentMethod": "Credit Card",
+          "paymentStatus": "Paid",
+          "totalAmount": 159.09,
+          "taxAmount": 7.59,
+          "discountAmount": 3.0,
+          "netAmount": 156.09,
+          "billingAddress": {
+            "customerFirstname": "Ikbel",
+            "customerLastname": "Sousse",
+            "segment": "Sousse",
+            "phone": "24946132",
+            "address": "15, Rue de Marseille",
+            "city": "Sousse",
+            "postal_code": "4000",
+            "country": "Tunisia"
+          },
+          "invoiceItems": [
+            {
+              "productId": "3244",
+              "productName": "La Goulette - Thon entier HV 2.1kg",
+              "quantity": "3",
+              "unitPrice": "46.2",
+              "totalPrice": "138.6000"
+            },
+            {
+              "productId": "3952",
+              "productName": "Oliv+ Trio d'Or - 50% Huile d'Olive 1L",
+              "quantity": "1",
+              "unitPrice": "15.39",
+              "totalPrice": "15.3900"
+            },
+            {
+              "productId": "154",
+              "productName": "Bonna - Pot moutarde 263ml (Unité)",
+              "quantity": "1",
+              "unitPrice": "5.1",
+              "totalPrice": "5.1000"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": "6427155",
+        "orderId": "63455",
+        "incrementId": "000052677",
+        "kamiounId": "000052677",
+        "state": "delivered",
+        "status": "valid",
+        "total": 210.5,
+        "createdAt": 1722350694,
+        "customerId": "7890",
+        "storeId": "2",
+        "customerPhone": "55223344",
+        "customerFirstname": "Ahmed",
+        "customerLastname": "Ben Salah",
+        "segment_type": "restaurant",
+        "deliveryAgentId": "agent002",
+        "deliveryAgentName": "Khalil Mohamed",
+        "deliverySlot": "Après-midi",
+        "deliveryDate": 1739232000,
+        "deliveryStatus": "delivered",
+        "source": "online",
+        "shippingAddress": {
+          "customerFirstname": "Ahmed",
+          "customerLastname": "Ben Salah",
+          "phone": "55223344",
+          "address": "24, Rue Ibn Khaldoun",
+          "city": "Tunis",
+          "postal_code": "1001",
+          "region": "ariana",
+          "country": "Tunisia"
+        },
+
+        "items": [
+          {
+            "id": "898900",
+            "orderId": "63455",
+            "productId": "5001",
+            "productName": "Barilla - Pâtes Spaghetti 500g",
+            "productPrice": "12.5",
+            "totalPrice": "25.00",
+            "quantity": "2",
+            "sku": "8001001234567",
+            "weight": "1",
+            "category": {
+              "categoryId": "2",
+              "categoryName": "Food",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "202",
+                  "subcategoryName": "Pasta",
+                  "description": "Various pasta products."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "22",
+              "code": "BAR001",
+              "company_name": "Barilla Group",
+              "contact_name": "Luca Rossi",
+              "phone_number": "33445566",
+              "postal_code": "2016",
+              "city": "Milan",
+              "country": "Italy",
+              "capital": "Rome",
+              "email": "sales@barillagroup.com"
+            }
+          },
+          {
+            "id": "797787",
+            "orderId": "63455",
+            "productId": "3244",
+            "productName": "La Goulette - Thon entier HV 2.1kg",
+            "productPrice": "46.2",
+            "totalPrice": "138.6000",
+            "quantity": "3.0000",
+            "sku": "61915718013445",
+            "weight": "6",
+            "category": {
+              "categoryId": "2",
+              "categoryName": "Food",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "201",
+                  "subcategoryName": "snacks",
+                  "description": "bla bla."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "9",
+              "code": "001",
+              "company_name": "Technofood",
+              "contact_name": "Mehdi Bourguiba",
+              "phone_number": "22218000",
+              "postal_code": "2082",
+              "city": "Tunis",
+              "country": "Tunisia",
+              "capital": "Tunis",
+              "email": "slim.boughzala@technofoodindustries.com"
+            }
+          },
+          {
+            "id": "898901",
+            "orderId": "63455",
+            "productId": "6100",
+            "productName": "Coca Cola - 1.5L",
+            "productPrice": "5.00",
+            "totalPrice": "30.00",
+            "quantity": "6",
+            "sku": "5449000000996",
+            "weight": "1.5",
+            "category": {
+              "categoryId": "3",
+              "categoryName": "Beverages",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "303",
+                  "subcategoryName": "Soft Drinks",
+                  "description": "Carbonated beverages."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "10",
+              "code": "COCA001",
+              "company_name": "Coca Cola Company",
+              "contact_name": "John Doe",
+              "phone_number": "11223344",
+              "postal_code": "10001",
+              "city": "Atlanta",
+              "country": "USA",
+              "capital": "Washington DC",
+              "email": "support@cocacola.com"
+            }
+          }
+        ],
+        "invoice": {
+          "invoiceId": "INV-20240211-001",
+          "orderId": "63455",
+          "invoiceDate": "2025-02-11",
+          "dueDate": "2025-02-18",
+          "paymentMethod": "Credit Card",
+          "paymentStatus": "Paid",
+          "totalAmount": 210.5,
+          "taxAmount": 10.5,
+          "discountAmount": 5.0,
+          "netAmount": 205.5,
+          "billingAddress": {
+            "customerFirstname": "Ahmed",
+            "customerLastname": "Ben Salah",
+            "phone": "55223344",
+            "address": "12, Avenue Habib Bourguiba",
+            "city": "Tunis",
+            "postal_code": "1000",
+            "country": "Tunisia"
+          },
+          "invoiceItems": [
+            {
+              "productId": "5001",
+              "productName": "Barilla - Pâtes Spaghetti 500g",
+              "quantity": "2",
+              "unitPrice": "12.5",
+              "totalPrice": "25.00"
+            },
+            {
+              "productId": "6100",
+              "productName": "Coca Cola - 1.5L",
+              "quantity": "6",
+              "unitPrice": "5.00",
+              "totalPrice": "30.00"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": "6427154",
+        "orderId": "63454",
+        "incrementId": "000052676",
+        "kamiounId": "000052676",
+        "state": "canceled",
+        "status": "invalid",
+        "total": 0.0,
+        "createdAt": 1742040000,
+        "customerId": "7891",
+        "storeId": "3",
+        "customerPhone": "51223344",
+        "customerFirstname": "Samir",
+        "customerLastname": "Sami",
+        "segment_type": "restaurant",
+        "deliveryAgentId": "agent003",
+        "deliveryAgentName": "Sarah Jouini",
+        "deliverySlot": "Matin",
+        "deliveryDate": null,
+        "deliveryStatus": "canceled",
+        "source": "online",
+        "shippingAddress": {
+          "customerFirstname": "Samir",
+          "customerLastname": "Sami",
+          "phone": "51223344",
+          "address": "Sarah Jouini",
+          "city": "Tunis",
+          "postal_code": "1001",
+          "region": "ariana",
+          "country": "Tunisia"
+        },
+        "items": [
+          {
+            "id": "797790",
+            "orderId": "63454",
+            "productId": "3244",
+            "productName": "La Goulette - Thon entier HV 2.1kg",
+            "productPrice": "46.2",
+            "totalPrice": "60.00",
+            "quantity": "1.0000",
+            "sku": "9876543210",
+            "weight": "3",
+            "category": {
+              "categoryId": "1",
+              "categoryName": "Electronics",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "101",
+                  "subcategoryName": "Kitchen Appliances",
+                  "description": "Kitchen equipment and appliances."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "9",
+              "code": "001",
+              "company_name": "Technofood",
+              "contact_name": "Mehdi Bourguiba",
+              "phone_number": "22218000",
+              "postal_code": "2082",
+              "city": "Tunis",
+              "country": "Tunisia",
+              "capital": "Tunis",
+              "email": "slim.boughzala@technofoodindustries.com"
+            }
+          },
+          {
+            "id": "797791",
+            "orderId": "63454",
+            "productId": "3952",
+            "productName": "Oliv+ Trio d'Or - 50% Huile d'Olive 1L",
+            "productPrice": "15.39",
+            "totalPrice": "15.39",
+            "quantity": "1.0000",
+            "sku": "6194017409148",
+            "weight": "6",
+            "category": {
+              "categoryId": "3",
+              "categoryName": "Beverages",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "301",
+                  "subcategoryName": "Olive Oils",
+                  "description": "Cold-pressed olive oils."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "9",
+              "code": "001",
+              "company_name": "Technofood",
+              "contact_name": "Mehdi Bourguiba",
+              "phone_number": "22218000",
+              "postal_code": "2082",
+              "city": "Tunis",
+              "country": "Tunisia",
+              "capital": "Tunis",
+              "email": "slim.boughzala@technofoodindustries.com"
+            }
+          }
+        ],
+        "return": {
+          "returnId": "RNT-20240211-003",
+          "orderId": "63454",
+          "returnStatus": "completed",
+          "refundAmount": 75.39,
+          "returnItems": [
+            {
+              "productId": "3244",
+              "productName": "La Goulette - Thon entier HV 2.1kg",
+              "quantity": "1",
+              "returnDate": 1742040000,
+              "unitPrice": "46.2",
+              "totalPrice": "46.2"
+            },
+            {
+              "productId": "3952",
+              "productName": "Oliv+ Trio d'Or - 50% Huile d'Olive 1L",
+              "quantity": "1",
+              "returnDate": 1742040000,
+              "unitPrice": "15.39",
+              "totalPrice": "15.39"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": "6427158",
+        "orderId": "63455",
+        "incrementId": "000052677",
+        "kamiounId": "000052677",
+        "state": "canceled",
+        "status": "invalid",
+        "total": 0.0,
+        "createdAt": 1645026319,
+        "customerId": "6324",
+        "storeId": "1",
+        "customerPhone": "24946132",
+        "customerFirstname": "Ikbel",
+        "customerLastname": "Sousse",
+        "segment_type": "drug store",
+        "deliveryAgentId": "agentid",
+        "deliveryAgentName": "agnetName",
+        "deliverySlot": "Matin",
+        "deliveryDate": 1723628376,
+        "deliveryStatus": null,
+        "source": "online",
+        "shippingAddress": {
+          "customerFirstname": "Ikbel",
+          "customerLastname": "Sousse",
+          "phone": "24946132",
+          "address": "Sarah Jouini",
+          "city": "Tunis",
+          "postal_code": "1002",
+          "region": "ben arous",
+          "country": "Tunisia"
+        },
+        "items": [
+          {
+            "id": "797792",
+            "orderId": "63455",
+            "productId": "3244",
+            "productName": "La Goulette - Thon entier HV 2.1kg",
+            "productPrice": "46.2",
+            "totalPrice": "46.2",
+            "quantity": "1.0000",
+            "sku": "61915718013445",
+            "weight": "6",
+            "category": {
+              "categoryId": "2",
+              "categoryName": "Food",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "201",
+                  "subcategoryName": "snacks",
+                  "description": "bla bla."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "9",
+              "code": "001",
+              "company_name": "Technofood",
+              "contact_name": "Mehdi Bourguiba",
+              "phone_number": "22218000",
+              "postal_code": "2082",
+              "city": "Tunis",
+              "country": "Tunisia",
+              "capital": "Tunis",
+              "email": "slim.boughzala@technofoodindustries.com"
+            }
+          },
+          {
+            "id": "797793",
+            "orderId": "63455",
+            "productId": "3952",
+            "productName": "Oliv+ Trio d'Or - 50% Huile d'Olive 1L",
+            "productPrice": "15.39",
+            "totalPrice": "15.39",
+            "quantity": "1.0000",
+            "sku": "6194017409148",
+            "weight": "6",
+            "category": {
+              "categoryId": "3",
+              "categoryName": "Beverages",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "301",
+                  "subcategoryName": "Olive Oils",
+                  "description": "Cold-pressed olive oils."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "9",
+              "code": "001",
+              "company_name": "Technofood",
+              "contact_name": "Mehdi Bourguiba",
+              "phone_number": "22218000",
+              "postal_code": "2082",
+              "city": "Tunis",
+              "country": "Tunisia",
+              "capital": "Tunis",
+              "email": "slim.boughzala@technofoodindustries.com"
+            }
+          }
+        ],
+        "return": {
+          "returnId": "RNT-20240215-001",
+          "orderId": "63455",
+          "returnStatus": "completed",
+          "refundAmount": 61.59,
+          "returnItems": [
+            {
+              "productId": "3244",
+              "productName": "La Goulette - Thon entier HV 2.1kg",
+              "quantity": "1",
+              "returnDate": 1645026319,
+              "unitPrice": "46.2",
+              "totalPrice": "46.2"
+            },
+            {
+              "productId": "3952",
+              "productName": "Oliv+ Trio d'Or - 50% Huile d'Olive 1L",
+              "quantity": "1",
+              "returnDate": 1739525976,
+              "unitPrice": "15.39",
+              "totalPrice": "15.39"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": "6427150",
+        "orderId": "63454",
+        "incrementId": "000052676",
+        "kamiounId": "000052676",
+        "state": "failed",
+        "status": "invalid",
+        "total": 0.0,
+        "createdAt": 1742040000,
+        "customerId": "7891",
+        "storeId": "3",
+        "customerPhone": "51223344",
+        "customerFirstname": "Samir",
+        "customerLastname": "Sami",
+        "segment_type": "restaurant",
+        "deliveryAgentId": "agent003",
+        "deliveryAgentName": "Sarah Jouini",
+        "deliverySlot": "Matin",
+        "deliveryDate": null,
+        "deliveryStatus": "canceled",
+        "source": "online",
+        "shippingAddress": {
+          "customerFirstname": "Samir",
+          "customerLastname": "Sami",
+          "phone": "51223344",
+          "address": "Sarah Jouini",
+          "city": "Tunis",
+          "postal_code": "1001",
+          "region": "ariana",
+          "country": "Tunisia"
+        },
+        "items": [
+          {
+            "id": "797790",
+            "orderId": "63454",
+            "productId": "5648",
+            "productName": "Moulinex - Mixeur 600W",
+            "productPrice": "60.0",
+            "totalPrice": "60.00",
+            "quantity": "1",
+            "sku": "9876543210",
+            "weight": "3",
+            "category": {
+              "categoryId": "1",
+              "categoryName": "Electronics",
+              "parentCategoryId": null,
+              "subcategories": [
+                {
+                  "subcategoryId": "101",
+                  "subcategoryName": "Kitchen Appliances",
+                  "description": "Kitchen equipment and appliances."
+                }
+              ]
+            },
+            "supplier": {
+              "manufacturer_id": "54",
+              "code": "MOU001",
+              "company_name": "Moulinex",
+              "contact_name": "Sara Hamdi",
+              "phone_number": "333445566",
+              "postal_code": "2111",
+              "city": "Paris",
+              "country": "France",
+              "capital": "Paris",
+              "email": "service@moulinex.com"
+            }
+          }
+        ],
+        "return": {
+          "returnId": "RNT-20240211-003",
+          "orderId": "63454",
+          "returnStatus": "completed",
+          "refundAmount": 60.0,
+          "returnItems": [
+            {
+              "productId": "5648",
+              "productName": "Moulinex - Mixeur 600W",
+              "quantity": "1",
+              "returnDate": 1742040000,
+              "unitPrice": "60.00",
+              "totalPrice": "60.00"
+            }
+          ]
+        }
+      }
+    }
+  ],
+
+  "products": [
+    {
+      "product": {
+        "productId": "3244",
+        "productName": "La Goulette - Thon entier HV 2.1kg",
+        "stock_id": "8",
+        "costPrice": "25.0",
+        "qty": "50",
+        "min_qty": "0",
+        "is_qty_decimal": "1",
+        "backorders": "0",
+        "min_sale_qty": "1",
+        "max_sale_qty": "100",
+        "is_in_stock": "1",
+        "manage_stock": "1",
+        "qty_increments": "1",
+        "supplier": {
+          "manufacturer_id": "9",
+          "code": "001",
+          "company_name": "Technofood",
+          "contact_name": "Mehdi Bourguiba",
+          "phone_number": "22218000",
+          "postal_code": "2082",
+          "city": "Tunis",
+          "country": "Tunisia",
+          "capital": "Tunis",
+          "email": "slim.boughzala@technofoodindustries.com"
+        }
+      }
+    },
+    {
+      "product": {
+        "productId": "3952",
+        "productName": "Oliv+ Trio d'Or - 50% Huile d'Olive 1L",
+        "stock_id": "1",
+        "costPrice": "40.0",
+        "qty": "45.5",
+        "min_qty": "0",
+        "is_qty_decimal": "1",
+        "backorders": "0",
+        "min_sale_qty": "1",
+        "max_sale_qty": "110",
+        "is_in_stock": "1",
+        "manage_stock": "1",
+        "qty_increments": "0.5",
+        "supplier": {
+          "manufacturer_id": "9",
+          "code": "001",
+          "company_name": "Technofood",
+          "contact_name": "Mehdi Bourguiba",
+          "phone_number": "22218000",
+          "postal_code": "2082",
+          "city": "Tunis",
+          "country": "Tunisia",
+          "capital": "Tunis",
+          "email": "slim.boughzala@technofoodindustries.com"
+        }
+      }
+    },
+    {
+      "product": {
+        "productId": "3955",
+        "productName": "Oliv+ Olive Tapenade - 150g",
+        "stock_id": "4",
+        "costPrice": "80.0",
+        "qty": "85",
+        "min_qty": "0",
+        "is_qty_decimal": "1",
+        "backorders": "0",
+        "min_sale_qty": "1",
+        "max_sale_qty": "30",
+        "is_in_stock": "1",
+        "manage_stock": "1",
+        "qty_increments": "0.5",
+        "supplier": {
+          "manufacturer_id": "9",
+          "code": "001",
+          "company_name": "Technofood",
+          "contact_name": "Mehdi Bourguiba",
+          "phone_number": "22218000",
+          "postal_code": "2082",
+          "city": "Tunis",
+          "country": "Tunisia",
+          "capital": "Tunis",
+          "email": "slim.boughzala@technofoodindustries.com"
+        }
+      }
+    },
+    {
+      "product": {
+        "productId": "3956",
+        "productName": "Oliv+ Extra Virgin Olive Oil - 100% 1L",
+        "stock_id": "2",
+        "costPrice": "12.0",
+        "qty": "60",
+        "min_qty": "0",
+        "is_qty_decimal": "1",
+        "backorders": "0",
+        "min_sale_qty": "1",
+        "max_sale_qty": "100",
+        "is_in_stock": "1",
+        "manage_stock": "1",
+        "qty_increments": "0.5",
+        "supplier": {
+          "manufacturer_id": "9",
+          "code": "001",
+          "company_name": "Technofood",
+          "contact_name": "Mehdi Bourguiba",
+          "phone_number": "22218000",
+          "postal_code": "2082",
+          "city": "Tunis",
+          "country": "Tunisia",
+          "capital": "Tunis",
+          "email": "slim.boughzala@technofoodindustries.com"
+        }
+      }
+    },
+    {
+      "product": {
+        "productId": "3957",
+        "productName": "Oliv+ Pesto Sauce - Basil & Olive Oil 250g",
+        "costPrice": "10.0",
+        "stock_id": "3",
+        "qty": "120",
+        "min_qty": "0",
+        "is_qty_decimal": "1",
+        "backorders": "0",
+        "min_sale_qty": "1",
+        "max_sale_qty": "50",
+        "is_in_stock": "1",
+        "manage_stock": "1",
+        "qty_increments": "0.5",
+        "supplier": {
+          "manufacturer_id": "9",
+          "code": "001",
+          "company_name": "Technofood",
+          "contact_name": "Mehdi Bourguiba",
+          "phone_number": "22218000",
+          "postal_code": "2082",
+          "city": "Tunis",
+          "country": "Tunisia",
+          "capital": "Tunis",
+          "email": "slim.boughzala@technofoodindustries.com"
+        }
+      }
+    },
+    {
+      "product": {
+        "productId": "3958",
+        "productName": "Oliv+ Olive Oil Soap 200g",
+        "stock_id": "5",
+        "costPrice": "4.0",
+        "qty": "70",
+        "min_qty": "0",
+        "is_qty_decimal": "1",
+        "backorders": "0",
+        "min_sale_qty": "1",
+        "max_sale_qty": "25",
+        "is_in_stock": "1",
+        "manage_stock": "1",
+        "qty_increments": "0.5",
+        "supplier": {
+          "manufacturer_id": "9",
+          "code": "001",
+          "company_name": "Technofood",
+          "contact_name": "Mehdi Bourguiba",
+          "phone_number": "22218000",
+          "postal_code": "2082",
+          "city": "Tunis",
+          "country": "Tunisia",
+          "capital": "Tunis",
+          "email": "slim.boughzala@technofoodindustries.com"
+        }
+      }
+    },
+    {
+      "product": {
+        "productId": "3959",
+        "productName": "Oliv+ Black Olive Paste - 200g",
+        "stock_id": "6",
+        "costPrice": "14.0",
+        "qty": "95",
+        "min_qty": "0",
+        "is_qty_decimal": "1",
+        "backorders": "0",
+        "min_sale_qty": "1",
+        "max_sale_qty": "40",
+        "is_in_stock": "1",
+        "manage_stock": "1",
+        "qty_increments": "0.5",
+        "supplier": {
+          "manufacturer_id": "9",
+          "code": "001",
+          "company_name": "Technofood",
+          "contact_name": "Mehdi Bourguiba",
+          "phone_number": "22218000",
+          "postal_code": "2082",
+          "city": "Tunis",
+          "country": "Tunisia",
+          "capital": "Tunis",
+          "email": "slim.boughzala@technofoodindustries.com"
+        }
+      }
+    },
+    {
+      "product": {
+        "productId": "3960",
+        "productName": "Oliv+ Green Olive Paste - 200g",
+        "stock_id": "7",
+        "costPrice": "15.0",
+        "qty": "100",
+        "min_qty": "0",
+        "is_qty_decimal": "1",
+        "backorders": "0",
+        "min_sale_qty": "1",
+        "max_sale_qty": "50",
+        "is_in_stock": "1",
+        "manage_stock": "1",
+        "qty_increments": "0.5",
+        "supplier": {
+          "manufacturer_id": "9",
+          "code": "001",
+          "company_name": "Technofood",
+          "contact_name": "Mehdi Bourguiba",
+          "phone_number": "22218000",
+          "postal_code": "2082",
+          "city": "Tunis",
+          "country": "Tunisia",
+          "capital": "Tunis",
+          "email": "slim.boughzala@technofoodindustries.com"
+        }
+      }
+    }
+  ]
+}

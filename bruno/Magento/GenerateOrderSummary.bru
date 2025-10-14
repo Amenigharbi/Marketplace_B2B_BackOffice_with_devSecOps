@@ -1,0 +1,21 @@
+meta {
+  name: Generate Order Summary
+  type: http
+  seq: 13
+}
+
+post {
+  url: https://sandbox.kamioun.com/rest/default/V1/order_summary/generate
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: pd2as4cqycmj671bga4egknw2csoa9b6
+}
+
+body:json {
+  {
+    "orderId": "63468"
+  }
+}
